@@ -27,6 +27,11 @@ class SmallestPossibleSumKtTest {
 
     @Test
     fun `five numbers not coprime`() {
-        solution(longArrayOf(3,13,23,7,83)) shouldBe 5
+        solution(longArrayOf(3, 13, 23, 7, 83)) shouldBe 5
+    }
+
+    @Test
+    fun `performance test`() {
+        solution(LongArray(30_000) { (it + 1).toLong() }) shouldBe 30_000
     }
 }
